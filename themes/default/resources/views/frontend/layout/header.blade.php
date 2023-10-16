@@ -1,4 +1,5 @@
 @php
+return;
     // Theme Option and Settings
     $header_logo = isset($logo_details['white_background_logo']) ? $logo_details['white_background_logo'] : null;
     $mobile_logo = isset($logo_details['white_mobile_background_logo']) ? $logo_details['white_mobile_background_logo'] : null;
@@ -61,7 +62,7 @@
                 <div class="col-lg-3 col-md-4 col-6">
                     <!-- Logo -->
                     <div class="logo">
-                        <a href="{{ route('theme.default.home') }}">
+                        <a href="/">
                             @if ($mood === 'dark')
                                 <!-- Main Header Logo -->
                                 @if (isset($dark_header_logo))

@@ -23,7 +23,7 @@ class PluginServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        if (env('IS_USER_REGISTERED')==1) {
+      //  if (env('IS_USER_REGISTERED')==1) {
             $plugins = getActivePlugins();
 
             foreach ($plugins as $plugin) {
@@ -45,6 +45,6 @@ class PluginServiceProvider extends ServiceProvider
                 $loader->setPsr4($plugin->namespace, base_path('plugins/' . $plugin->location . '/src'));
                 $loader->register(true);
             }
-        }
+       // }
     }
 }

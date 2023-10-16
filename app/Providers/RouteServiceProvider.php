@@ -35,7 +35,7 @@ class RouteServiceProvider extends ServiceProvider
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
 
-            if (env('IS_USER_REGISTERED') == 1) {
+            //if (env('IS_USER_REGISTERED') == 1) {
                 $active_theme = getActiveTheme();
                 if ($active_theme != null) {
                     if (file_exists(base_path('themes/' . $active_theme->location . '/routes/api.php'))) {
@@ -49,7 +49,7 @@ class RouteServiceProvider extends ServiceProvider
                             ->group(base_path('themes/' . $active_theme->location . '/routes/web.php'));
                     }
                 }
-            }
+            //}
         });
     }
 

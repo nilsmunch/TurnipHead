@@ -1,4 +1,5 @@
-@php
+404@php
+return;
     $generalSettings = getGeneralSettingsDetails();
     $active_theme = getActiveTheme();
     $preloader = getThemeOption('preloader', $active_theme->id);
