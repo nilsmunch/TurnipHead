@@ -7,6 +7,10 @@ error_reporting(E_ALL);
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
+echo 'Test';
+
+return 'Hi there';
+
 define('LARAVEL_START', microtime(true));
 
 

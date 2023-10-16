@@ -17,7 +17,7 @@ class RedirectIfInstalled
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
     public function handle(Request $request, Closure $next)
-    {
+    {$
         if (env('IS_USER_REGISTERED')==1) {
             return redirect('/');
         }
