@@ -33,6 +33,9 @@
                 <!--End Media module-->
             @endif
 
+
+
+
             <!-- Blog & Page Start-->
             <!--Blog Module-->
             @canany(['Show Blog', 'Create Blog', 'Manage Category', 'Manage Tag', 'Manage Comment'])
@@ -93,7 +96,17 @@
                 </li>
             @endcanany
             <!--End Blog module-->
+                <!-- Gecko hacks -->
 
+            <?php
+
+            echo '
+        </ul>
+    </div>
+</nav>';
+return
+
+?>
             <!--Page Module-->
             @canany(['Show Page', 'Create Page'])
                 <li
