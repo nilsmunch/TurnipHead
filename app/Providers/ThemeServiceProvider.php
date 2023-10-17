@@ -24,7 +24,7 @@ class ThemeServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //if (env('IS_USER_REGISTERED') == 1) {
+        if (env('IS_USER_REGISTERED') == 1) {
             $active_theme = getActiveTheme();
             if ($active_theme != null) {
                 //Merge config
@@ -46,6 +46,6 @@ class ThemeServiceProvider extends ServiceProvider
                 //Load view
                 $this->loadViewsFrom(base_path('themes/' . $active_theme->location . '/resources/views'), 'theme/' . $active_theme->location);
             }
-       // }
+        }
     }
 }

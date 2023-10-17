@@ -24,7 +24,7 @@ class PluginRouteServices extends ServiceProvider
     public function boot()
     {
         $this->routes(function () {
-           // if (env('IS_USER_REGISTERED')==1) {
+            if (env('IS_USER_REGISTERED')==1) {
                 $plugins = getActivePlugins();
 
                 foreach ($plugins as $plugin) {
@@ -39,7 +39,7 @@ class PluginRouteServices extends ServiceProvider
                             ->group(base_path('plugins/' . $plugin->location . '/routes/web.php'));
                     }
                 }
-            //}
+            }
         });
     }
 }
