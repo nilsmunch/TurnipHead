@@ -101,7 +101,7 @@ function front_translate($key, $lang = null, $addslashes = false)
     $active_theme = getActiveTheme();
 
     if ($lang == null) {
-        $lang = getFrontLocale();
+        $lang = 'en';
     }
 
     $lang_key = trim($key);
