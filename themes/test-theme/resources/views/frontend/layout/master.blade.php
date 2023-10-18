@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.84.0">
-    <title>Test Template</title>
+    <title>TurnipHead News</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ asset('themes/test-theme/public/assets/css/bootstrap.min.css') }}" rel="stylesheet">
