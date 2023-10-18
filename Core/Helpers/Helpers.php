@@ -216,7 +216,7 @@ if (!function_exists('saveFileInStorage')) {
         $path = $location . '/' . $file_name;
 
         Storage::disk('s3')->put($path, file_get_contents($file));
-        $full_path = $path;
+        $full_path = Storage::disk('s3')->url($path);
         /*
         $permission = substr(sprintf('%o', fileperms('public/storage/' . $location)), -4);
         if ($permission !== '0777') {
