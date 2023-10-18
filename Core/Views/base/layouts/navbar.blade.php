@@ -1,13 +1,4 @@
 <nav class="sidebar" data-trigger="scrollbar">
-    <!-- Sidebar Header -->
-    <div class="sidebar-header d-none d-lg-block">
-        <!-- Sidebar Toggle Pin Button -->
-        <div class="sidebar-toogle-pin">
-            <i class="icofont-tack-pin"></i>
-        </div>
-        <!-- End Sidebar Toggle Pin Button -->
-    </div>
-    <!-- End Sidebar Header -->
     <!-- Sidebar Body -->
     <div class="sidebar-body">
         <!-- Nav -->
@@ -19,18 +10,6 @@
                         <span class="link-title">{{ translate('Dashboard') }}</span>
                     </a>
                 </li>
-            @endif
-
-            @if (auth()->user()->can('Manage Media'))
-                <!--Media Module-->
-                <li class="{{ Request::routeIs(['core.media.page']) ? 'active ' : '' }}">
-                    <a href="{{ route('core.media.page') }}">
-                        <i class="icofont-multimedia"></i>
-                        <span class="link-title">{{ translate('Media') }}</span>
-                    </a>
-
-                </li>
-                <!--End Media module-->
             @endif
 
 
@@ -99,6 +78,22 @@
                 </li>
             @endcanany
             <!--End Blog module-->
+
+
+                @if (auth()->user()->can('Manage Media'))
+                <!--Media Module-->
+                    <li class="{{ Request::routeIs(['core.media.page']) ? 'active ' : '' }}">
+                        <a href="{{ route('core.media.page') }}">
+                            <i class="icofont-multimedia"></i>
+                            <span class="link-title">{{ translate('Media') }}</span>
+                        </a>
+
+                    </li>
+                    <!--End Media module-->
+                @endif
+
+
+
             <!--Page Module-->
 
 <?php /*
