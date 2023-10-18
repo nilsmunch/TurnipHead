@@ -206,14 +206,14 @@
                             <div class="col-sm-8">
                                 <div class="d-flex d-sm-inline-flex align-items-center mr-sm-5 mb-3">
                                     <label class="custom-checkbox position-relative mr-2">
-                                        <input type="checkbox" id="blog_title" name="blog_title" class="options">
+                                        <input type="checkbox" checked id="blog_title" name="blog_title" class="options">
                                         <span class="checkmark"></span>
                                     </label>
                                     <label for="blog_title">{{ translate('Blog Title') }} </label>
                                 </div>
                                 <div class="d-flex d-sm-inline-flex align-items-center mr-sm-5 mb-3">
                                     <label class="custom-checkbox position-relative mr-2">
-                                        <input type="checkbox" id="short_details" name="short_details" class="options">
+                                        <input type="checkbox" checked id="short_details" name="short_details" class="options">
                                         <span class="checkmark"></span>
                                     </label>
                                     <label for="short_details">
@@ -222,7 +222,7 @@
                                 </div>
                                 <div class="d-flex d-sm-inline-flex align-items-center">
                                     <label class="custom-checkbox position-relative mr-2">
-                                        <input type="checkbox" id="blog_details" name="blog_details" class="options">
+                                        <input type="checkbox" checked id="blog_details" name="blog_details" class="options">
                                         <span class="checkmark"></span>
                                     </label>
                                     <label for="blog_details">
@@ -242,7 +242,7 @@
                             </label>
                             <div class="col-sm-8">
                                 <input type="number" name="blog_title_length" id="blog_title_length"
-                                    class="form-control blog_title_length" value="{{ old('blog_title_length') }}"
+                                    class="form-control blog_title_length" value="{{ old('blog_title_length',20) }}"
                                     placeholder="{{ translate('Title Length') }}">
                                 <p class="text-danger" id="blog_title_length_error"></p>
                             </div>
@@ -257,7 +257,7 @@
                             </label>
                             <div class="col-sm-8">
                                 <input type="number" name="short_details_length" id="short_details_length"
-                                    class="form-control short_details_length" value="{{ old('short_details_length') }}"
+                                    class="form-control short_details_length" value="{{ old('short_details_length',70) }}"
                                     placeholder="{{ translate('Short Details Length') }}">
                                 <p class="text-danger" id="short_details_length_error"></p>
                             </div>
@@ -272,7 +272,7 @@
                             </label>
                             <div class="col-sm-8">
                                 <input type="number" name="blog_details_length" id="blog_details_length"
-                                    class="form-control blog_details_length" value="{{ old('blog_details') }}"
+                                    class="form-control blog_details_length" value="{{ old('blog_details',900) }}"
                                     placeholder="{{ translate('Content Length') }}">
                                 <p class="text-danger" id="blog_details_length_error"></p>
                             </div>
