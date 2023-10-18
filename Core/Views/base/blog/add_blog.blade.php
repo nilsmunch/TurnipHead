@@ -39,7 +39,7 @@
                 <div class="card mb-30">
                     <div class="card-body">
                         <div class="d-sm-flex justify-content-between align-items-center">
-                            <h4 class="font-20">{{ translate('AI Assistent') }}</h4>
+                            <h4 class="font-20">TurnipHead AI Input</h4>
                         </div>
                         {{-- Language --}}
                         <div class="form-group row my-4">
@@ -132,12 +132,12 @@
                         {{-- Primary Focus --}}
                         <div class="form-group row my-4">
                             <label for="primary_focus"
-                                class="col-sm-4 font-14 bold black">{{ translate('What is the primary focus of your blog') . ' ?' }}<span
+                                class="col-sm-4 font-14 bold black">Primary Focus<span
                                     class="text-danger"> * </span>
                             </label>
                             <div class="col-sm-8">
                                 <textarea name="primary_focus" id="primary_focus" class="form-control primary_focus" value="{{ old('primary_focus') }}"
-                                    placeholder="{{ translate('Primary Focus') }}"></textarea>
+                                    placeholder="{{ translate('Primary Focus') }}" style="height:400px"></textarea>
                                 <p class="text-danger" id="primary_focus_error"></p>
                             </div>
                         </div>
