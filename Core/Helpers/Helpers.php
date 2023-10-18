@@ -212,13 +212,16 @@ if (!function_exists('saveFileInStorage')) {
      */
     function saveFileInStorage($file, $file_name, $location, $file_type, $media_type)
     {
-        $full_path = $file->storeAs('/public/' . $location, $file_name);
+        //$full_path = $file->storeAs('/public/' . $location, $file_name);
         $path = $location . '/' . $file_name;
 
+        Storage::disk('s3')->put($path, file_get_contents($file));
+        $full_path = $path;
+        /*
         $permission = substr(sprintf('%o', fileperms('public/storage/' . $location)), -4);
         if ($permission !== '0777') {
             chmod('public/storage/' . $location, 0777);
-        }
+        }*/
 
         $exploded_file_name = explode('.', $file_name);
         $original_file_name = $exploded_file_name[0];
