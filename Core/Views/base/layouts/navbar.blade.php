@@ -42,7 +42,7 @@
                 <li
                     class="{{ Request::routeIs(['core.blog.category', 'core.add.blog.category', 'core.edit.blog.category', 'core.blog', 'core.add.blog', 'core.edit.blog', 'core.tag', 'core.edit.tag', 'core.add.tag', 'core.blog.comment', 'core.blog.comment.edit', 'core.blog.comment.setting', 'core.blog.ai.setting', 'core.blog.share.options']) ? 'active sub-menu-opened' : '' }}">
                     <a href="#">
-                        <i class="icofont-blogger"></i>
+                        <i class="icofont-page"></i>
                         <span class="link-title">{{ translate('Blog') }}</span>
                     </a>
                     <ul class="nav sub-menu">
@@ -67,6 +67,7 @@
                                 <a href="{{ route('core.tag') }}">{{ translate('Tags') }}</a>
                             </li>
                         @endcan
+                            <?php /*
                         @can('Manage Comment')
                             <li
                                 class="{{ Request::routeIs(['core.blog.comment', 'core.blog.comment.edit']) ? 'active ' : '' }}">
@@ -92,22 +93,15 @@
                                 </ul>
                             </li>
                         @endcan
+
+ */ ?>
                     </ul>
                 </li>
             @endcanany
             <!--End Blog module-->
-                <!-- Gecko hacks -->
-
-            <?php
-
-            echo '
-        </ul>
-    </div>
-</nav>';
-return
-
-?>
             <!--Page Module-->
+
+<?php /*
             @canany(['Show Page', 'Create Page'])
                 <li
                     class="{{ Request::routeIs(['core.page', 'core.page.add', 'core.page.edit']) ? 'active sub-menu-opened' : '' }}">
@@ -129,6 +123,7 @@ return
                     </ul>
                 </li>
             @endcanany
+
             <!--End Blog module-->
             <!-- Blog & Page End -->
 
@@ -166,6 +161,7 @@ return
             <!--Theme otions-->
             @includeIf(getActiveThemeOptions())
             <!--End Theme options-->
+
 
             <!--Plugins Module-->
             @can('Manage Plugins')
@@ -238,6 +234,7 @@ return
                 <!--End Settings Modules-->
             @endif
 
+ */ ?>
             <!--Users Module-->
             @if (auth()->user()->can('Show User') ||
                     auth()->user()->can('Show Role') ||
