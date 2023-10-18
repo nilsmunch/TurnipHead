@@ -263,6 +263,7 @@
             @endif
             <!--End users-->
 
+                <?php /*
             <!--Activity Logs Module-->
             @if (auth()->user()->can('Manage Login activity'))
                 <li
@@ -301,6 +302,7 @@
                 </ul>
             </li>
             <!--End system Module-->
+ */ ?>
         </ul>
         <!-- End Nav -->
     </div>
