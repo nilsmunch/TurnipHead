@@ -23,4 +23,3 @@ Homestead.json
 .phpunit.result.cache
 .idea/vcs.xml
 .idea/workspace.xml
-storage/

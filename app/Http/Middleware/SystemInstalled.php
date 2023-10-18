@@ -18,9 +18,9 @@ class SystemInstalled
      */
     public function handle(Request $request, Closure $next)
     {
-       // if (env('IS_USER_REGISTERED')!=1 && !str_contains($request->url(), 'install')) {
-            //return redirect('/install');
-       // }
+        if (env('IS_USER_REGISTERED')!=1 && !str_contains($request->url(), 'install')) {
+            return redirect('/install');
+        }
         return $next($request);
     }
 }

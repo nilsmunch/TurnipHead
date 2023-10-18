@@ -124,15 +124,13 @@ class FrontendController extends Controller
 
             if (isActivePluging('pagebuilder')) {
                 if($page->is_home == true){
-                    //return redirect()->route('theme.default.home');
+                    return redirect()->route('theme.default.home');
                 }
             }
 
             return view('theme/default::frontend.pages.page', compact('page', 'page_sections'));
         } catch (\Exception $e) {
-            echo $e;
-            return $e;
-            //abort(404);
+            abort(404);
         }
     }
 
