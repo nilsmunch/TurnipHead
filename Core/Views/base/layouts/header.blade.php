@@ -136,28 +136,6 @@
                                 </div>
                                 <!-- End Visit website -->
                             </li>
-                            <li class="ml-3">
-                                <!-- Main Header Language -->
-                                <div class="main-header-notification">
-                                    <a href="#" class="header-icon notification-icon" data-toggle="dropdown"
-                                        title="Language Options">
-                                        @if (isset($active_lang->code))
-                                            <img src="{{ asset('/public/flags/') . '/' . $active_lang->code . '.png' }}"
-                                                class="w-20" alt="{{ $active_lang->code }}">
-                                        @endif
-                                    </a>
-                                    <div id="lang-change" class="dropdown-menu style--three">
-                                        @foreach ($active_langs as $lang)
-                                            <a href="#" class="dropdown-item" data-lan="{{ $lang->code }}">
-                                                <img src="{{ asset('/public/flags/') . '/' . $lang->code . '.png' }}"
-                                                    class="mr-2 w-20" alt="{{ $lang->code }}">
-                                                {{ $lang->native_name }}
-                                            </a>
-                                        @endforeach
-                                    </div>
-                                </div>
-                                <!-- End Main Header Language -->
-                            </li>
                         </ul>
                     </div>
                     <!-- End Header Right -->
