@@ -24,6 +24,11 @@ class FrontendController extends Controller
             ->select(['id', 'name', 'permalink', 'publish_at', 'short_description', 'image'])
             ->first();
 
+        if (empty($featured_post)) {
+            $featured_post = TlBlog::select(['id', 'name', 'permalink', 'publish_at', 'short_description', 'image'])
+                ->first();
+        }
+
         
         return view('theme/test-theme::frontend.pages.home', [
             'popular_post' => $popular_post, 
