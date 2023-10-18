@@ -217,6 +217,7 @@ if (!function_exists('saveFileInStorage')) {
 
         Storage::disk('s3')->put($path, file_get_contents($file));
         $full_path = Storage::disk('s3')->url($path);
+        //dd($full_path);
         /*
         $permission = substr(sprintf('%o', fileperms('public/storage/' . $location)), -4);
         if ($permission !== '0777') {
@@ -227,11 +228,13 @@ if (!function_exists('saveFileInStorage')) {
         $original_file_name = $exploded_file_name[0];
         $db_file = saveImageInfo($file, $full_path, $path, $location, $file_type, $media_type, $original_file_name);
 
+        /*
         if ($file_type == 'image') {
             $cropping_sizes = getDefaultCroppingSizes($file, $location, $path, $original_file_name);
             $db_file->variant = json_encode($cropping_sizes);
             $db_file->update();
         }
+        */
 
         return $db_file->id;
     }
@@ -248,8 +251,8 @@ if (!function_exists('saveImageInfo')) {
         $uploaded_file = new UploadedFile();
         $uploaded_file->media_type = $media_type;
         $uploaded_file->name = $original_file_name;
-        $uploaded_file->size = Storage::size($full_path);
-        $uploaded_file->path = 'storage/' . $path;
+        $uploaded_file->size = 0;//Storage::size($full_path);
+        $uploaded_file->path = $full_path;
         $uploaded_file->folder_name = 'storage/' . $location;
         $uploaded_file->file_type = $type;
         $uploaded_file->uploaded_by = Auth::user() != null ? Auth::user()->name : null;
@@ -1405,7 +1408,7 @@ if (!function_exists('project_asset')) {
      */
     function project_asset($path, $secure = null)
     {
-        return app('url')->asset("/public/" . $path, $secure);
+        return $path;//app('url')->asset("/public/" . $path, $secure);
     }
 }
 

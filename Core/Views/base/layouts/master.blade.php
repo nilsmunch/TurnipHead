@@ -767,16 +767,15 @@
                         for (let i = 0; i < media_files.length; i++) {
                             if (media_files[i].id == id) {
                                 $('#file_name').html(media_files[i].name)
-                                $('#file_url').val('{{ project_asset('/') }}' + "\/" + media_files[i].path)
-                                $('#download_file').attr('href', '{{ project_asset('/') }}' + "\/" + media_files[i]
+                                $('#file_url').val(media_files[i].path)
+                                $('#download_file').attr('href', media_files[i]
                                     .path)
                                 $('#file_type').html(media_files[i].file_type)
                                 $('#file_size').html((media_files[i].size / 1000) + ' kb')
                                 $('#uploaded_by').html(media_files[i].uploaded_by)
                                 $('#creaated_at').html(media_files[i].created_at)
                                 $('#updated_at').html(media_files[i].updated_at)
-                                $('#preview_image').attr('src', '{{ project_asset('/') }}' + "\/" + media_files[i]
-                                    .path)
+                                $('#preview_image').attr('src', media_files[i].path)
 
                                 $('#attachment-details-alt-text').val(media_files[i].alt)
                                 $('#attachment-details-title').val(media_files[i].title)

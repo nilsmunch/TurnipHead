@@ -19,6 +19,7 @@
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
         "laravel/ui": "^3.4",
+        "league/flysystem-aws-s3-v3": "^3.0",
         "milon/barcode": "^9.0",
         "orhanerday/open-ai": "^4.7",
         "paypal/paypal-checkout-sdk": "^1.0",
