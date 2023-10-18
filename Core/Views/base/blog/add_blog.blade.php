@@ -235,7 +235,7 @@
                         {{-- Choose Filed --}}
 
                         {{-- Title Length --}}
-                        <div class="form-group row my-4 d-none">
+                        <div class="form-group row my-4">
                             <label for="blog_title_length"
                                 class="col-sm-4 font-14 bold black">{{ translate('Title Length') }}<span
                                     class="text-danger"> * </span>
@@ -250,7 +250,7 @@
                         {{-- Title Length --}}
 
                         {{-- Short Description Length --}}
-                        <div class="form-group row my-4 d-none">
+                        <div class="form-group row my-4">
                             <label for="short_details_length"
                                 class="col-sm-4 font-14 bold black">{{ translate('Short Details Length') }}<span
                                     class="text-danger"> * </span>
@@ -265,7 +265,7 @@
                         {{-- Short Description Length --}}
 
                         {{-- Content Length --}}
-                        <div class="form-group row my-4 d-none">
+                        <div class="form-group row my-4">
                             <label for="blog_details_length"
                                 class="col-sm-4 font-14 bold black">{{ translate('Content Length') }}<span
                                     class="text-danger"> * </span>
