@@ -137,7 +137,7 @@
                             </label>
                             <div class="col-sm-8">
                                 <textarea name="primary_focus" id="primary_focus" class="form-control primary_focus" value="{{ old('primary_focus') }}"
-                                    placeholder="{{ translate('Primary Focus') }}" style="height:400px"></textarea>
+                                    placeholder="{{ translate('Primary Focus') }}" style="height:200px"></textarea>
                                 <p class="text-danger" id="primary_focus_error"></p>
                             </div>
                         </div>
